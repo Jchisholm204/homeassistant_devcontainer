@@ -3,20 +3,20 @@ Development Container Framework for working with a Home Assistant Server.
 Home Assistant directories are ignored. 
 Configuration files should be stored in their own repositories.
 
-# Requirements
+## Requirements
 - Home Assistant Server on the local network
 - IP of Home Assistant
 - [Home Assistant SAMBA Share Addon](https://github.com/home-assistant/addons/blob/master/samba/DOCS.md)
 - Username and Password configured in the SAMBA addon.
 
-# Usage Instructions
-## 1. Clone the Repository
+## Usage Instructions
+### 1. Clone the Repository
 Clone this repository to your development platform (HAOS VM host or personal computer) with:
 ```sh
 git clone https://github.com/Jchisholm204/homeassistant_devcontainer.git
 ```
 
-## 2. Configure Script Defaults
+### 2. Configure Script Defaults
 *Optional:* Configure the default values for running the script.
 Parameters can be changed at runtime.
 
@@ -34,7 +34,7 @@ HA_MOUNT_DIRS=('config', 'backup', 'media', 'share', 'addons', 'addon_configs')
 - IP: IP of the Home Assistant (Virtual) Machine (can be configured at launch)
 - Mount Dirs: ZSH Style list of HA directories to mount
 
-## 3. Mounting Directories
+### 3. Mounting Directories
 Once run, the Home Assistant configuration directories will be automatically mounted.
 
 ```sh
@@ -46,8 +46,11 @@ Launch options can also be specified:
 env.sh mount <optional: password> <optional: ip>
 ```
 
-## 4. Unmounting Directories
+### 4. Unmounting Directories
 
 ```sh
 env.sh umount
 ```
+
+## Working on Plugins?
+Consider using the `install_ha_venv.sh` script to create a Python Virtual Environment containing the Home Assistant Core components.

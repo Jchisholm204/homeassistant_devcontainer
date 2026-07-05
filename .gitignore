@@ -3,4 +3,5 @@ backup/*
 media/*
 share/*
 addons/*
+core/*
 addon_configs/*
